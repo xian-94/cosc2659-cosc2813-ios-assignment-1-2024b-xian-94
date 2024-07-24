@@ -32,6 +32,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7568D8212C5165A3004B2988 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7568D8222C5165AA004B2988 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7568D8252C516675004B2988 /* WelcomeView */,
+				7568D8242C516660004B2988 /* DetailView */,
+				7568D8232C516653004B2988 /* ListView */,
+				75848F502C4BBED300226343 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7568D8232C516653004B2988 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		7568D8242C516660004B2988 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		7568D8252C516675004B2988 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WelcomeView;
+			sourceTree = "<group>";
+		};
 		75848F422C4BBED200226343 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +90,9 @@
 		75848F4D2C4BBED300226343 /* CocktailRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				7568D8222C5165AA004B2988 /* View */,
+				7568D8212C5165A3004B2988 /* Model */,
 				75848F4E2C4BBED300226343 /* CocktailRecipeApp.swift */,
-				75848F502C4BBED300226343 /* ContentView.swift */,
 				75848F522C4BBED500226343 /* Assets.xcassets */,
 				75848F542C4BBED500226343 /* Preview Content */,
 			);
