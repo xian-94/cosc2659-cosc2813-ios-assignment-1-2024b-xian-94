@@ -19,7 +19,6 @@ struct SearchBar: View {
     // Bind the user input
     @Binding var text: String
     
-    
     var body: some View {
         HStack {
             // Placeholder for user input
@@ -35,7 +34,6 @@ struct SearchBar: View {
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
-                        
                     }
                 )
                 .overlay(

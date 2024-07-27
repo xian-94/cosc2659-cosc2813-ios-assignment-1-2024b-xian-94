@@ -1,14 +1,14 @@
 /*
-  RMIT University Vietnam
-  Course: COSC2659|COSC2813 iOS Development
-  Semester: 2024B
-  Assessment: Assignment 1
-  Author: Truong Hong Van
-  ID: 3957034
-  Created  date: 20/7/2024
-  Last modified:
-  Acknowledgement: Acknowledge the resources that you use here.
-*/
+ RMIT University Vietnam
+ Course: COSC2659|COSC2813 iOS Development
+ Semester: 2024B
+ Assessment: Assignment 1
+ Author: Truong Hong Van
+ ID: 3957034
+ Created  date: 20/7/2024
+ Last modified:
+ Acknowledgement: Acknowledge the resources that you use here.
+ */
 
 import SwiftUI
 
@@ -38,11 +38,7 @@ struct CategoryCard: View {
 // Preview the component
 struct CategoryCard_Preview: PreviewProvider {
     static var previews: some View {
-        Group {
-            CategoryCard(category: categories[0])
-            
-            CategoryCard(category: categories[1])
-        }
+        CategoryCard(category: categories[1])
         
     }
 }
