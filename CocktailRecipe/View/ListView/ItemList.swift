@@ -30,7 +30,7 @@ struct ItemList: View {
                 LazyVGrid(columns: columns, spacing: 20, content: {
                     ForEach(items, content: {
                         item in
-                        NavigationLink(destination: ItemDetail(item: item)){
+                        NavigationLink(destination: ItemDetailView(item: item)){
                             ItemCard(item: item)
                                 .foregroundColor(.black)
                         }
