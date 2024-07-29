@@ -13,37 +13,48 @@
 import Foundation
 import SwiftUI
 
-// TODO: Apply font and color later
+// TODO: Apply font and color later, add description to the Item model
 struct Description: View {
     var item: Item
     private let slogan = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     var body: some View {
         VStack {
             Text(item.name)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                 .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             Spacer()
+                .frame(height: 10)
+            Rating()
+            Spacer()
+                .frame(height: 20)
+            Text(slogan)
+                .font(.caption)
+            Spacer()
                 .frame(height: 20)
             HStack {
-                Text("Level")
-                    .font(.headline)
+                Text("Level ")
+                    .font(.subheadline)
                     .fontWeight(.medium)
+                Spacer()
+                    .frame(width: 50, alignment: .leading)
                 Text(item.level)
                 
             }
             Spacer()
                 .frame(height: 20)
             HStack {
-                Text("Rating ")
-                    .font(.headline)
+                Text("Time ")
+                    .font(.subheadline)
                     .fontWeight(.medium)
-                Rating()
+                Text("\(item.time) minutes")
+                    .offset(x: 40)
+                
             }
-            .padding(.leading, 40)
-            
+            Spacer()
+                .frame(height: 20)
         }
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-      
+        
     }
 }
 
