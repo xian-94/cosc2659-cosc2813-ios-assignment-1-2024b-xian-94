@@ -35,6 +35,14 @@ struct InstructionTab: View {
                 }
             }
             .padding(.vertical, 4)
+            Divider()
+            VStack(alignment: .center) {
+                Text("Video Guide")
+                    .font(.headline)
+                VideoView(videoID: "E-Tlb5x-QQg")
+                    .frame(height: UIScreen.main.bounds.height * 0.3)
+            }
+            .padding(.vertical, 5)
         }
         .padding()
     }
