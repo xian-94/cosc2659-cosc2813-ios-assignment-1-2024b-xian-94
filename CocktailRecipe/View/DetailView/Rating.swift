@@ -13,11 +13,12 @@ import Foundation
 import SwiftUI
 
 // Clickable star rating for item
-//TODO: Change color 
+//TODO: Change color, add real number of stars
 struct Rating: View {
     // State to control the rating
-    @State var rating: Int = 0
-    
+    @State private var rating: Int = 0
+    @State private var countRating = 0
+    @State private var hasRated: Bool = false 
     var body: some View {
         ZStack {
             HStack {
@@ -28,8 +29,18 @@ struct Rating: View {
                         .foregroundColor(rating >= i ? Color.yellow : Color.gray)
                     // Make the star rating clickable
                         .onTapGesture {
-                            rating = i
+                            // If the user has rated, increase the rating by 1
+                            if !hasRated {
+                                rating = i
+                                hasRated = true
+                                countRating += 1
+                            }
+                            // If the user changes the number of stars, it doesn't affect the rating
+                            else {
+                                rating = i
+                            }
                         }
+                    
                 }
             }
         }

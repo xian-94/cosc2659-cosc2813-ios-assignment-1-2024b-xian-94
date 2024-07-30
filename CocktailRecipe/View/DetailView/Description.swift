@@ -51,8 +51,6 @@ struct Description: View {
                     .offset(x: 40)
                 
             }
-            Spacer()
-                .frame(height: 20)
         }
         
     }

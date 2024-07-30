@@ -19,6 +19,7 @@
 		758EE0E52C54EB0100952D9F /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758EE0E42C54EB0100952D9F /* NavigationBar.swift */; };
 		758EE0E72C54EB0D00952D9F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758EE0E62C54EB0D00952D9F /* Filter.swift */; };
 		7595FC212C57E366002D549F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FC202C57E366002D549F /* VideoView.swift */; };
+		7595FC232C57ECDF002D549F /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FC222C57ECDF002D549F /* Tabs.swift */; };
 		7597DF942C53F28700492D41 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597DF932C53F28700492D41 /* SearchBar.swift */; };
 		75A1A2F12C56516B008F67FC /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1A2F02C56516B008F67FC /* Description.swift */; };
 		75A1A2F32C565615008F67FC /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1A2F22C565615008F67FC /* Rating.swift */; };
@@ -45,6 +46,7 @@
 		758EE0E42C54EB0100952D9F /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		758EE0E62C54EB0D00952D9F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		7595FC202C57E366002D549F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		7595FC222C57ECDF002D549F /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		7597DF932C53F28700492D41 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		75A1A2F02C56516B008F67FC /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		75A1A2F22C565615008F67FC /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				758A9F862C569F7E009FFB8D /* IngredientTab.swift */,
 				758715FB2C57A69A00B92BEB /* InstructionTab.swift */,
 				7595FC202C57E366002D549F /* VideoView.swift */,
+				7595FC222C57ECDF002D549F /* Tabs.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				75848F512C4BBED300226343 /* ContentView.swift in Sources */,
 				75A48B902C5237D400AAB18B /* CategoryList.swift in Sources */,
 				75848F4F2C4BBED300226343 /* CocktailRecipeApp.swift in Sources */,
+				7595FC232C57ECDF002D549F /* Tabs.swift in Sources */,
 				75A48B982C525BAD00AAB18B /* ItemDetailView.swift in Sources */,
 				758A9F872C569F7E009FFB8D /* IngredientTab.swift in Sources */,
 				758715FC2C57A69A00B92BEB /* InstructionTab.swift in Sources */,

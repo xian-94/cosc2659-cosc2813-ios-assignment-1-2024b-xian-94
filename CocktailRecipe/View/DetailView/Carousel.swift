@@ -33,20 +33,20 @@ struct Carousel: View {
                         geometry in
                         Image(imageName)
                             .resizable()
-                            .frame(width: 250, height: 300)
+                            .frame(width: 300, height: 300)
                             .cornerRadius(10)
                         // 3D effect when swiping 
                             .rotation3DEffect(Angle(degrees:
                             (Double(geometry.frame(in:.global).minX) - 100) / -20), axis: (x: 0.0, y: 10.0, z: 0.0)
                             )
                     }
-                    .frame(width: 246, height: 300)
+                    .frame(width: 300, height: 300)
                 }
             }
             .padding(50)
 
         }
-        .frame(width: UIScreen.main.bounds.width, height: 400)
+        .frame(width: UIScreen.main.bounds.width, height: 300)
         
     }
 }

@@ -81,7 +81,7 @@ struct IngredientTab: View {
     
     // Main view
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             // Table header
             HStack {
                 HStack {
@@ -102,25 +102,27 @@ struct IngredientTab: View {
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
             }
-            .padding()
+            .padding(.horizontal)
             
             Divider()
             
             // Table Rows
-            List {
-                ForEach(sortIngredients()) {
-                    ingredient in
-                    HStack {
-                        Text(ingredient.name)
-                        Spacer()
-                        Text(String(format: "%.1f", ingredient.quantity))
-                        Text(ingredient.unit)
+            VStack(alignment: .center) {
+             
+                    ForEach(sortIngredients()) {
+                        ingredient in
+                        HStack {
+                            Text(ingredient.name)
+                            Spacer()
+                            Text(String(format: "%.1f", ingredient.quantity))
+                            Text(ingredient.unit)
+                        
                     }
-                    
                 }
             }
-            .listStyle(PlainListStyle())
+            .padding()
         }
+        .padding()
     }
 }
 
