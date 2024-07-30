@@ -17,10 +17,11 @@ import SwiftUI
 struct Rating: View {
     // State to control the rating
     @State private var rating: Int = 0
-    @State private var countRating = 0
-    @State private var hasRated: Bool = false 
+    @State private var countRating = 1
+    @State private var hasRated: Bool = false
+    
     var body: some View {
-        ZStack {
+        VStack {
             HStack {
                 ForEach(1..<6) {
                     i in
@@ -40,9 +41,13 @@ struct Rating: View {
                                 rating = i
                             }
                         }
-                    
                 }
             }
+            Spacer()
+                .frame(height: 20)
+            Text("\(countRating) users like this")
+                .font(.system(size: 20))
+                .foregroundColor(.gray)
         }
     }
 }

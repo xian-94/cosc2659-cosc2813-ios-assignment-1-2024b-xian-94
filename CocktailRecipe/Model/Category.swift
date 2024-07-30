@@ -26,8 +26,3 @@ struct Category: Identifiable, Codable {
     // TODO: Add color after deciding the theme
     
 }
-
-var categories: [Category] = [
-    Category(id: 1, name: "Wine", imageName: "demo"),
-    Category(id: 2, name: "Wine", imageName: "demo")
-]

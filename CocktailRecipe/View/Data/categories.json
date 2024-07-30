@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Classic"
+        "imageName": "theclassic"
+    },
+    {
+        "id": 2,
+        "name": "Sour"
+        "imageName": "theclassic"
+    },
+    {
+        "id": 3,
+        "name": "Frozen"
+        "imageName": "theclassic"
+    },
+    {
+        "id": 4,
+        "name": "Martini"
+        "imageName": "theclassic"
+    },
+    {
+        "id": 5,
+        "name": "Spritz"
+        "imageName": "theclassic"
+    },
+    {
+        "id": 6,
+        "name": "Mocktails"
+        "imageName": "theclassic"
+    },
+    {
+        "id": 7,
+        "name": "Highball"
+        "imageName": "theclassic"
+    },
+    {
+        "id": 8,
+        "name": "Flip"
+        "imageName": "theclassic"
+    },
+    
+    
+]

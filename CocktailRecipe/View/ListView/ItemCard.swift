@@ -26,19 +26,20 @@ struct ItemCard : View  {
                     .frame(width: 50, height: 20)
                     .cornerRadius(20)
                     .scaleEffect(x:2, y: 1)
-                    .offset(x: -10, y: -15)
+                    .offset(x: -10, y: -25)
                 Rectangle()
                     .fill(.gray)
                     .opacity(0.4)
                     .frame(width: 50, height: 20)
                     .cornerRadius(50)
                     .scaleEffect(x:2, y: 1)
+                    .offset(y: -10)
                 Rectangle()
                     .fill(.gray)
                     .opacity(0.4)
                     .frame(width: 50, height: 20)
                     .cornerRadius(50)
-                    .offset(x: 10, y: 15)
+                    .offset(x: 10, y: 5)
                     .scaleEffect(x:2, y: 1)
             }
             VStack {
@@ -46,24 +47,26 @@ struct ItemCard : View  {
                     .resizable()
                     .frame(width: 90, height: 100)
                     .offset(x: 0, y: -5)
+                Spacer()
+                    .frame(height: 20)
                 VStack {
                     Text(item.name)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .font(.system(size: 15))
+                        .font(.system(size: 20))
                     Spacer()
                         .frame(height: 10)
                     HStack {
                         HStack {
-                            Image(systemName: "clock")
-                            Text("\(item.time) min")
-                                .font(.system(size: 13))
+                            Image(systemName: "glass")
+                            Text("\(item.glass)")
+                                .font(.system(size: 15))
                         }
                         Spacer()
                             .frame(width: 10)
                         HStack {
                             Image(systemName: "level")
                             Text("\(item.level)")
-                                .font(.system(size: 13))
+                                .font(.system(size: 15))
                         }
                     }
                 }

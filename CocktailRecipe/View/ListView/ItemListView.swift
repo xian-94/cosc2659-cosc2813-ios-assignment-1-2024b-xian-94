@@ -15,20 +15,32 @@ import SwiftUI
 
 // Main view: Navigation list of items view
 struct ItemListView: View {
+    // Manage search query
+    @State private var searchQuery: String = ""
+    // Filter the items given the query
+    private func filterItems() -> [Item] {
+        if searchQuery.isEmpty {
+            return items
+        }
+        else {
+            return items.filter {
+                $0.name.lowercased().contains(searchQuery.lowercased())
+            }
+        }
+    }
     var body: some View {
-        ScrollView {
-            ZStack {
-                Color(.white)
-                    .ignoresSafeArea(.all)
-                VStack {
-                    StatefulPreviewWrapper("") {
-                        SearchBar(text: $0)
+        NavigationView {
+            ScrollView {
+                ZStack {
+                    Color(.white)
+                        .ignoresSafeArea(.all)
+                    VStack {
+                        SearchBar(text: $searchQuery)
+                        Spacer()
+                            .frame(height: 20)
+                        CategoryList()
+                        ItemList(items: filterItems())
                     }
-                    Spacer()
-                        .frame(height: 20)
-                    CategoryList()
-                    ItemList()
-                    
                 }
             }
         }

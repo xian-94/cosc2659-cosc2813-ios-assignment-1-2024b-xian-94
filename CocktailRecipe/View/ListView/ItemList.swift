@@ -15,7 +15,7 @@ import SwiftUI
 
 // Create the ItemList component to display the list of items
 struct ItemList: View {
-    
+    var items: [Item]
     // Define 2 columns with flexible width in a row
     let columns = [
         GridItem(.flexible()),
@@ -23,28 +23,24 @@ struct ItemList: View {
     ]
     
     var body: some View {
-        NavigationView {
-            // Make the view srcollable
-            ScrollView {
-                // Build the grid layout for the item list
-                LazyVGrid(columns: columns, spacing: 20, content: {
-                    ForEach(items, content: {
-                        item in
-                        NavigationLink(destination: ItemDetailView(item: item)){
-                            ItemCard(item: item)
-                                .foregroundColor(.black)
-                        }
-                    })
-                })
-            }
-        }
+        // Build the grid layout for the item list
+        LazyVGrid(columns: columns, spacing: 20, content: {
+            ForEach(items, content: {
+                item in
+                NavigationLink(destination: ItemDetailView(item: item)){
+                    ItemCard(item: item)
+                        .foregroundColor(.black)
+                }
+            })
+        })
     }
-}
     
+}
+
 // Preview the content
 struct ItemList_Preview: PreviewProvider {
     static var previews: some View {
-        ItemList()
+        ItemList(items: items)
     }
 }
-    
+
