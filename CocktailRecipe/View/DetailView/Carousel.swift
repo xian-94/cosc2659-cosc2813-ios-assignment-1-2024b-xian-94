@@ -19,21 +19,21 @@ import SwiftUI
 
 // Carousel effect for a collection of image
 struct Carousel: View {
-    private let images = ["demo2", "demo2", "demo2"]
+    var item: Item
     // Add indicators
     
     var body: some View {
         // Horizontal scroll enables the effect
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
-                ForEach(images, id: \.self) {
+                ForEach(item.collection, id: \.self) {
                     imageName in
                     // Carousel effect using Geometry Reader
                     GeometryReader {
                         geometry in
                         Image(imageName)
                             .resizable()
-                            .frame(width: 300, height: 300)
+                            .frame(width: 320, height: 300)
                             .cornerRadius(10)
                         // 3D effect when swiping 
                             .rotation3DEffect(Angle(degrees:
@@ -53,7 +53,7 @@ struct Carousel: View {
 
 struct Carousel_Preview: PreviewProvider {
     static var previews: some View {
-        Carousel()
+        Carousel(item: items[0])
     }
 }
 

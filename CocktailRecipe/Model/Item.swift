@@ -18,13 +18,14 @@ import CoreLocation
 struct Item: Identifiable, Codable {
     var id: Int
     var name: String
-    var category: UUID
+    var category: Int
     var level: String
     var glass: String
     var imageName: String
     // Collection of images
     var collection: [String]
-    var ratings: Int
+    var ratings: Float
+    var numRatings: Int
     var description: String
     var ingredients: [Ingredient]
     var instruction: [String]
@@ -32,21 +33,21 @@ struct Item: Identifiable, Codable {
     var coordinates: Coordinates
     // Location coordination object and image object
     var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitue)
+        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
     var image: Image {
         Image(imageName)
     }
-    // Create a collection of image object given the image names
-    var imageCollection: [Image] {
-        collection.map {Image($0) }
-    }
+//    // Create a collection of image object given the image names
+//    var imageCollection: [Image] {
+//        collection.map {Image($0) }
+//    }
     
 }
 
 // Coordinates of location
 struct Coordinates: Codable {
     var latitude: Double
-    var longitue: Double
+    var longitude: Double
 }
 

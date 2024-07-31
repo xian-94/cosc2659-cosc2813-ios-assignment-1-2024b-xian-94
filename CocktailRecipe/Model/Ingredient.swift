@@ -16,7 +16,7 @@ import SwiftUI
 // Create the Item object and its attributes
 // TODO: Modify ID to UUID
 struct Ingredient: Identifiable, Codable {
-    var id: UUID
+    var id: Int
     var name: String
     var quantity: Double
     var unit: String

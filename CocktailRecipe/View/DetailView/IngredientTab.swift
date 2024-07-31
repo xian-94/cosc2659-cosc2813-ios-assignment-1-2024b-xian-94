@@ -17,7 +17,6 @@ import SwiftUI
 // TODO: Add style and portions if have time,  done state
 // Ingredeident tab content
 struct IngredientTab: View {
-    
     // The cases for sorting
     enum SortOrder {
         case nameAscending, nameDescending, quantityAscending, quantityDescending
@@ -32,8 +31,8 @@ struct IngredientTab: View {
     @State private var sortArrowQuantity: String = "arrow.up"
     
     // Set the initial state for ingredient list
-    init(ingredients: [Ingredient]) {
-        _ingredients = State(initialValue: ingredients)
+    init(item: Item) {
+        _ingredients = State(initialValue: item.ingredients)
     }
     
     // Handle sorting based on case
@@ -128,6 +127,6 @@ struct IngredientTab: View {
 
 struct Ingredient_Preview: PreviewProvider {
     static var previews: some View {
-        IngredientTab(ingredients: ingredients)
+        IngredientTab(item: items[0])
     }
 }

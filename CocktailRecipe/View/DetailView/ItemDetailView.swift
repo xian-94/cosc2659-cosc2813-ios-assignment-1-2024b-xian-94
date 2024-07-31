@@ -20,9 +20,11 @@ struct ItemDetailView : View  {
     var body: some View {
         ScrollView {
             VStack {
-                Carousel()
+                Carousel(item: item)
+                Spacer()
+                    .frame(height: 30)
                 Description(item: item)
-                Tabs()
+                Tabs(item: item)
             }
             .padding()
         }

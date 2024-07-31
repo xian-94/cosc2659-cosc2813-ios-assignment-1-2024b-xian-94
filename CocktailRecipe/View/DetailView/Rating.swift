@@ -16,44 +16,61 @@ import SwiftUI
 //TODO: Change color, add real number of stars
 struct Rating: View {
     // State to control the rating
-    @State private var rating: Int = 0
-    @State private var countRating = 1
-    @State private var hasRated: Bool = false
+    private var rating: Float
+    @State private var currentRating: Int
+    @State private var countRating: Int
+    @State private var hasRated: Bool
+    
+    init(item: Item) {
+        currentRating = 0
+        countRating = item.numRatings
+        hasRated = false
+        rating = item.ratings
+    }
     
     var body: some View {
         VStack {
+            
             HStack {
                 ForEach(1..<6) {
                     i in
                     Image(systemName: "star.fill")
                         .font(.title3)
-                        .foregroundColor(rating >= i ? Color.yellow : Color.gray)
+                        .foregroundColor(currentRating >= i ? Color.yellow : Color.gray)
                     // Make the star rating clickable
                         .onTapGesture {
                             // If the user has rated, increase the rating by 1
                             if !hasRated {
-                                rating = i
+                                currentRating = i
                                 hasRated = true
                                 countRating += 1
                             }
                             // If the user changes the number of stars, it doesn't affect the rating
                             else {
-                                rating = i
+                                currentRating = i
                             }
                         }
                 }
             }
             Spacer()
                 .frame(height: 20)
-            Text("\(countRating) users like this")
-                .font(.system(size: 20))
-                .foregroundColor(.gray)
+            HStack {
+                Image(systemName: "star.fill")
+                    .font(.title3)
+                    .foregroundColor(Color.yellow)
+                Text(String(format: "%.1f", rating))
+                    .font(.title3)
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                Text("(\(countRating))")
+                    .font(.system(size: 20))
+                    .foregroundColor(.gray)
+            }
         }
     }
 }
 
 struct Rating_Preview: PreviewProvider {
     static var previews: some View {
-        Rating()
+        Rating(item: items[0])
     }
 }

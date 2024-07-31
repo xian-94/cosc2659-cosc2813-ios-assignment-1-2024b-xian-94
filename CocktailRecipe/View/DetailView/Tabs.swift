@@ -12,6 +12,7 @@ import Foundation
 import SwiftUI
 
 struct Tabs: View {
+    var item: Item
     // Hold the selected tab index
     @State private var selected = 0
     let titles = ["Ingredients", "Instruction", "Shop"]
@@ -42,13 +43,13 @@ struct Tabs: View {
             
             // Display tabs based on index chosen
             if self.selected == 0 {
-                IngredientTab(ingredients: ingredients)
+                IngredientTab(item: item)
             }
             else if self.selected == 1 {
-                InstructionTab()
+                InstructionTab(item: item)
             }
             else {
-                InstructionTab()
+                InstructionTab(item: item)
             }
         }
     }
@@ -56,6 +57,6 @@ struct Tabs: View {
 
 struct Tabs_Preview : PreviewProvider {
     static var previews: some View {
-        Tabs()
+        Tabs(item: items[0])
     }
 }

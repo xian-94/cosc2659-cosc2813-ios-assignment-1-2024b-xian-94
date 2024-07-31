@@ -25,7 +25,7 @@ struct Description: View {
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
             Spacer()
                 .frame(height: 10)
-            Rating()
+            Rating(item: item)
             Spacer()
                 .frame(height: 20)
             Text(slogan)
@@ -44,10 +44,10 @@ struct Description: View {
             Spacer()
                 .frame(height: 20)
             HStack {
-                Text("Time ")
+                Text("Glass ")
                     .font(.subheadline)
                     .fontWeight(.medium)
-                Text("\(item.time) minutes")
+                Text("\(item.glass)")
                     .offset(x: 40)
                 
             }

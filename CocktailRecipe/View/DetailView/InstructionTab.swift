@@ -15,16 +15,10 @@ import SwiftUI
 
 // TODO: Add real item object later
 struct InstructionTab: View {
-    private let instruction: [String] = [
-        "Muddle mint leaves and sugar in a glass.",
-        "Add lime juice and rum.",
-        "Fill the glass with ice and top with soda water.",
-        "Stir gently and garnish with mint."
-    ]
-    
+    var item: Item
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(Array(instruction.enumerated()), id: \.offset) {
+            ForEach(Array(item.instruction.enumerated()), id: \.offset) {
                 i, step in
                 HStack {
                     Text("\(i + 1)")
@@ -50,6 +44,6 @@ struct InstructionTab: View {
 
 struct InstructionTab_Preview: PreviewProvider {
     static var previews: some View {
-        InstructionTab()
+        InstructionTab(item: items[0])
     }
 }
