@@ -38,11 +38,6 @@ struct Item: Identifiable, Codable {
     var image: Image {
         Image(imageName)
     }
-//    // Create a collection of image object given the image names
-//    var imageCollection: [Image] {
-//        collection.map {Image($0) }
-//    }
-    
 }
 
 // Coordinates of location

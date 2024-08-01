@@ -15,21 +15,40 @@ import CoreLocation
 
 // Decode JSON file into a struct
 // Load category data
+//func loadCategories(fileName: String) -> [Category] {
+//    if let file = Bundle.main.url(forResource: fileName, withExtension: "json") {
+//        if let data = try? Data(contentsOf: file) {
+//            do {
+//                let decoder = JSONDecoder()
+//                let decoded = try decoder.decode([Category].self, from: data)
+//                return decoded
+//            } catch let error {
+//                fatalError("Failed to decode JSON: \(error)")
+//            }
+//        }
+//    } else {
+//        fatalError("Couldn't load \(fileName) file ")
+//    }
+//    return [] as [Category]
+//}
+// Function to load categories from JSON
 func loadCategories(fileName: String) -> [Category] {
-    if let file = Bundle.main.url(forResource: fileName, withExtension: nil) {
+    if let file = Bundle.main.url(forResource: fileName, withExtension: "json") {
         if let data = try? Data(contentsOf: file) {
             do {
                 let decoder = JSONDecoder()
                 let decoded = try decoder.decode([Category].self, from: data)
                 return decoded
-            } catch let error {
+            } catch {
                 fatalError("Failed to decode JSON: \(error)")
             }
+        } else {
+            fatalError("Couldn't load data from \(fileName) file.")
         }
     } else {
-        fatalError("Couldn't load \(fileName) file ")
+        fatalError("Couldn't find \(fileName) file in main bundle.")
     }
-    return [] as [Category]
+    return []
 }
 
 // Load item data

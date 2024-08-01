@@ -24,7 +24,7 @@ struct ItemList: View {
     
     var body: some View {
         // Build the grid layout for the item list
-        LazyVGrid(columns: columns, spacing: 20, content: {
+        LazyVGrid(columns: columns, spacing: 30, content: {
             ForEach(items, content: {
                 item in
                 NavigationLink(destination: ItemDetailView(item: item)){
@@ -33,6 +33,7 @@ struct ItemList: View {
                 }
             })
         })
+        .padding()
     }
     
 }

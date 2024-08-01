@@ -32,7 +32,7 @@ struct ItemListView: View {
         NavigationView {
             ScrollView {
                 ZStack {
-                    Color(.white)
+                    Color("background")
                         .ignoresSafeArea(.all)
                     VStack {
                         SearchBar(text: $searchQuery)

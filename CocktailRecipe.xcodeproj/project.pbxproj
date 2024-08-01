@@ -27,6 +27,11 @@
 		7597DF942C53F28700492D41 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597DF932C53F28700492D41 /* SearchBar.swift */; };
 		75A1A2F12C56516B008F67FC /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1A2F02C56516B008F67FC /* Description.swift */; };
 		75A1A2F32C565615008F67FC /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1A2F22C565615008F67FC /* Rating.swift */; };
+		75A461552C5BE6090051C448 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A4614B2C5BE46F0051C448 /* Lobster-Regular.ttf */; };
+		75A461562C5BE60C0051C448 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A461512C5BE5530051C448 /* Raleway-VariableFont_wght.ttf */; };
+		75A461572C5BE60E0051C448 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A461522C5BE56E0051C448 /* PlayfairDisplay-VariableFont_wght.ttf */; };
+		75A461582C5BE6100051C448 /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A461532C5BE56E0051C448 /* PlayfairDisplay-Italic-VariableFont_wght.ttf */; };
+		75A461592C5BE6120051C448 /* Raleway-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A461502C5BE5530051C448 /* Raleway-Italic-VariableFont_wght.ttf */; };
 		75A48B8C2C52287700AAB18B /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A48B8B2C52287700AAB18B /* CategoryCard.swift */; };
 		75A48B8E2C52295300AAB18B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A48B8D2C52295300AAB18B /* Category.swift */; };
 		75A48B902C5237D400AAB18B /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A48B8F2C5237D400AAB18B /* CategoryList.swift */; };
@@ -59,6 +64,12 @@
 		7597DF932C53F28700492D41 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		75A1A2F02C56516B008F67FC /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		75A1A2F22C565615008F67FC /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		75A4614B2C5BE46F0051C448 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		75A461502C5BE5530051C448 /* Raleway-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		75A461512C5BE5530051C448 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		75A461522C5BE56E0051C448 /* PlayfairDisplay-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		75A461532C5BE56E0051C448 /* PlayfairDisplay-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		75A4615A2C5BE8EF0051C448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		75A48B8B2C52287700AAB18B /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		75A48B8D2C52295300AAB18B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		75A48B8F2C5237D400AAB18B /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
@@ -161,6 +172,8 @@
 		75848F4D2C4BBED300226343 /* CocktailRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				75A4615A2C5BE8EF0051C448 /* Info.plist */,
+				75A461542C5BE5E70051C448 /* Fonts */,
 				7568D8222C5165AA004B2988 /* View */,
 				7568D8212C5165A3004B2988 /* Model */,
 				75848F4E2C4BBED300226343 /* CocktailRecipeApp.swift */,
@@ -192,6 +205,18 @@
 			children = (
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		75A461542C5BE5E70051C448 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				75A4614B2C5BE46F0051C448 /* Lobster-Regular.ttf */,
+				75A461512C5BE5530051C448 /* Raleway-VariableFont_wght.ttf */,
+				75A461522C5BE56E0051C448 /* PlayfairDisplay-VariableFont_wght.ttf */,
+				75A461532C5BE56E0051C448 /* PlayfairDisplay-Italic-VariableFont_wght.ttf */,
+				75A461502C5BE5530051C448 /* Raleway-Italic-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,8 +277,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A461562C5BE60C0051C448 /* Raleway-VariableFont_wght.ttf in Resources */,
 				75848F562C4BBED500226343 /* Preview Assets.xcassets in Resources */,
+				75A461552C5BE6090051C448 /* Lobster-Regular.ttf in Resources */,
+				75A461592C5BE6120051C448 /* Raleway-Italic-VariableFont_wght.ttf in Resources */,
 				75848F532C4BBED500226343 /* Assets.xcassets in Resources */,
+				75A461572C5BE60E0051C448 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */,
+				75A461582C5BE6100051C448 /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */,
 				758F380E2C58F2B9006A08B8 /* items.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +455,7 @@
 				DEVELOPMENT_TEAM = FBGLW6Y4VC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CocktailRecipe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +485,7 @@
 				DEVELOPMENT_TEAM = FBGLW6Y4VC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CocktailRecipe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,44 +1,32 @@
 [
     {
         "id": 1,
-        "name": "Classic"
-        "imageName": "theclassic"
+        "name": "Classic",
+        "imageName": "classic"
     },
     {
         "id": 2,
-        "name": "Sour"
-        "imageName": "theclassic"
+        "name": "Sour",
+        "imageName": "sour"
     },
     {
         "id": 3,
-        "name": "Frozen"
-        "imageName": "theclassic"
+        "name": "Frozen",
+        "imageName": "frozen"
     },
     {
         "id": 4,
-        "name": "Martini"
-        "imageName": "theclassic"
+        "name": "Martini",
+        "imageName": "martini"
     },
     {
         "id": 5,
-        "name": "Spritz"
-        "imageName": "theclassic"
+        "name": "Spritz",
+        "imageName": "spirit"
     },
     {
         "id": 6,
-        "name": "Mocktails"
-        "imageName": "theclassic"
-    },
-    {
-        "id": 7,
-        "name": "Highball"
-        "imageName": "theclassic"
-    },
-    {
-        "id": 8,
-        "name": "Flip"
-        "imageName": "theclassic"
-    },
-    
-    
+        "name": "Mocktails",
+        "imageName": "mocktail"
+    }
 ]
