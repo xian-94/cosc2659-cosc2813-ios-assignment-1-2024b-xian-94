@@ -27,7 +27,6 @@
 		7595FC232C57ECDF002D549F /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7595FC222C57ECDF002D549F /* Tabs.swift */; };
 		7597DF942C53F28700492D41 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7597DF932C53F28700492D41 /* SearchBar.swift */; };
 		75A1A2F12C56516B008F67FC /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1A2F02C56516B008F67FC /* Description.swift */; };
-		75A1A2F32C565615008F67FC /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A1A2F22C565615008F67FC /* Rating.swift */; };
 		75A461552C5BE6090051C448 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A4614B2C5BE46F0051C448 /* Lobster-Regular.ttf */; };
 		75A461562C5BE60C0051C448 /* Raleway-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A461512C5BE5530051C448 /* Raleway-VariableFont_wght.ttf */; };
 		75A461572C5BE60E0051C448 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A461522C5BE56E0051C448 /* PlayfairDisplay-VariableFont_wght.ttf */; };
@@ -64,7 +63,6 @@
 		7595FC222C57ECDF002D549F /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		7597DF932C53F28700492D41 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		75A1A2F02C56516B008F67FC /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
-		75A1A2F22C565615008F67FC /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		75A4614B2C5BE46F0051C448 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		75A461502C5BE5530051C448 /* Raleway-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		75A461512C5BE5530051C448 /* Raleway-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				75A48B972C525BAD00AAB18B /* ItemDetailView.swift */,
 				758AC6452C553639001DC512 /* Carousel.swift */,
 				75A1A2F02C56516B008F67FC /* Description.swift */,
-				75A1A2F22C565615008F67FC /* Rating.swift */,
 				758A9F862C569F7E009FFB8D /* IngredientTab.swift */,
 				758715FB2C57A69A00B92BEB /* InstructionTab.swift */,
 				7595FC202C57E366002D549F /* VideoView.swift */,
@@ -316,7 +313,6 @@
 				7597DF942C53F28700492D41 /* SearchBar.swift in Sources */,
 				75A48B922C523E3B00AAB18B /* ItemCard.swift in Sources */,
 				758EE0E72C54EB0D00952D9F /* Filter.swift in Sources */,
-				75A1A2F32C565615008F67FC /* Rating.swift in Sources */,
 				7595FC212C57E366002D549F /* VideoView.swift in Sources */,
 				75A1A2F12C56516B008F67FC /* Description.swift in Sources */,
 				75A48B8E2C52295300AAB18B /* Category.swift in Sources */,

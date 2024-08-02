@@ -18,15 +18,19 @@ struct ItemDetailView : View  {
     var item: Item
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Carousel(item: item)
-                Spacer()
-                    .frame(height: 30)
-                Description(item: item)
-                Tabs(item: item)
+        ZStack {
+            Color("background")
+                .ignoresSafeArea(.all)
+            ScrollView {
+                VStack {
+                    Carousel(item: item)
+                    Spacer()
+                        .frame(height: 30)
+                    Description(item: item)
+                    Tabs(item: item)
+                }
+                .padding()
             }
-            .padding()
         }
     }
 }

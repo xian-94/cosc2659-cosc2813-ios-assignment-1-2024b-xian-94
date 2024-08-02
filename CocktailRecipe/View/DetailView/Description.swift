@@ -13,30 +13,49 @@
 import Foundation
 import SwiftUI
 
-// TODO: Apply font and color later, add description to the Item model
+
 struct Description: View {
     var item: Item
     var body: some View {
         VStack {
+            // Item name
             Text(item.name)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .font(.custom("Playfair Display", size: 25))
+                .foregroundColor(Color("main-text"))
             Spacer()
                 .frame(height: 10)
-            Rating(item: item)
+            // Rating
+            HStack {
+                Image(systemName: "star.fill")
+                    .font(.title3)
+                    .foregroundColor(Color.yellow)
+                Text(String(format: "%.1f", item.ratings))
+                    .font(.system(size: 18))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(Color("main-text"))
+                Text("(\(item.numRatings))")
+                    .font(.custom("Raleway", size: 20))
+                    .foregroundColor(Color("second-text"))
+            }
             Spacer()
                 .frame(height: 20)
+            // Item description
             Text(item.description)
                 .font(.custom("Raleway", size: 15))
+                .foregroundColor(Color("main-text"))
             Spacer()
                 .frame(height: 20)
+            // Other information
             HStack(spacing: 20) {
                 Text("Level")
                     .font(.custom("Raleway", size: 15))
                     .fontWeight(.medium)
+                    .foregroundColor(Color("main-text"))
                 Text(item.level)
                     .font(.custom("Raleway", size: 15))
+                    .foregroundColor(Color("main-text"))
                 
             }
             Spacer()
@@ -45,8 +64,10 @@ struct Description: View {
                 Text("Glass")
                     .font(.custom("Raleway", size: 15))
                     .fontWeight(.medium)
+                    .foregroundColor(Color("main-text"))
                 Text("\(item.glass)")
                     .font(.custom("Raleway", size: 15))
+                    .foregroundColor(Color("main-text"))
                     
                 
             }

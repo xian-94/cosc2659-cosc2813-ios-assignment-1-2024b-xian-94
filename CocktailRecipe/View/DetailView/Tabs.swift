@@ -20,15 +20,18 @@ struct Tabs: View {
     var body: some View {
         VStack {
             HStack(spacing: 0) {
+                // Loop through each title for display
                 ForEach(0..<titles.count, id: \.self) { i in
                     Text(titles[i])
-                        .font(.system(size: 13))
-                        .foregroundColor(self.selected == i ? .white : Color(.black).opacity(0.7))
+                        .font(.custom("Playfair Display", size: 14))
+                    // Selected title has a different color
+                        .foregroundColor(self.selected == i ? Color(.white) : Color("main-text"))
                         .fontWeight(.bold)
                         .padding(.vertical, 10)
                         .padding(.horizontal, 30)
-                        .background(Color(.gray).opacity(self.selected == i ? 1 : 0))
-                        .cornerRadius(10)
+                    // Selected title has an oustanding background
+                        .background(Color("cranberry").opacity(self.selected == i ? 1 : 0))
+                        .cornerRadius(30)
                         .onTapGesture {
                             withAnimation(.default) {
                                 self.selected = i
@@ -37,8 +40,8 @@ struct Tabs: View {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 }
             }
-            .background(Color.black.opacity(0.06))
-            .cornerRadius(10)
+            .background(Color("cranberry").opacity(0.2))
+            .cornerRadius(30)
             .padding(.horizontal)
             
             // Display tabs based on index chosen

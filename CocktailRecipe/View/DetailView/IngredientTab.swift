@@ -80,6 +80,7 @@ struct IngredientTab: View {
     
     // Main view
     var body: some View {
+        
         VStack {
             // Table header
             HStack {
@@ -88,7 +89,9 @@ struct IngredientTab: View {
                         Image(systemName: sortArrowName)
                     }
                     Text("Name")
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
+                        .font(.custom("Raleway", size: 18))
+                        .foregroundColor(Color("main-text"))
                 }
                 Spacer()
                 HStack {
@@ -99,29 +102,43 @@ struct IngredientTab: View {
                     }
                     Text("Quantity")
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .font(.custom("Raleway", size: 18))
+                        .foregroundColor(Color("main-text"))
                 }
             }
             .padding(.horizontal)
-            
             Divider()
             
             // Table Rows
-            VStack(alignment: .center) {
-                    ForEach(sortIngredients()) {
-                        ingredient in
-                        HStack {
-                            Text(ingredient.name)
-                            Spacer()
-                            Text(String(format: "%.1f", ingredient.quantity))
-                            Text(ingredient.unit)
+            VStack(alignment: .center, spacing: 5) {
+                ForEach(sortIngredients()) {
+                    ingredient in
+                    HStack {
+                        Text(ingredient.name)
+                            .font(.custom("Raleway", size: 15))
+                            .foregroundColor(Color("main-text"))
+                        Spacer()
+                        Text(String(format: "%.1f", ingredient.quantity))
+                            .font(.custom("Raleway", size: 15))
+                            .foregroundColor(Color("main-text"))
+                            .fontWeight(.medium)
+                        Spacer()
+                            .frame(width: 5)
+                        Text(ingredient.unit)
+                            .font(.custom("Raleway", size: 15))
+                            .foregroundColor(Color("main-text"))
                     }
+                    Divider()
                 }
             }
             .padding()
         }
         .padding()
+        
     }
 }
+
+
 
 struct Ingredient_Preview: PreviewProvider {
     static var previews: some View {
