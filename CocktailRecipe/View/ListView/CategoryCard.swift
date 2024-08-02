@@ -23,6 +23,7 @@ struct CategoryCard: View {
     var body: some View {
         ZStack {
             Rectangle()
+                .fill(Color(category.colorName))
                 .frame(width: 70, height: 70)
                 .cornerRadius(10)
             category.image

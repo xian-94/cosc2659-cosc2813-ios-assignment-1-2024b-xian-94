@@ -16,12 +16,26 @@ import SwiftUI
 
 // TODO: Render items based on category later 
 struct CategoryList: View {
+    // Track the chosen category
+    @State var selectedCategory: Category?
     var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
         HStack {
-            ForEach(categories) {
-                category in
-                CategoryCard(category: category)
+                ForEach(categories) {
+                    category in
+                    CategoryCard(category: category)
+                        .onTapGesture {
+                            selectedCategory = category
+                        }
+                }
             }
+        .padding()
+        }
+        if let selectedCategory = selectedCategory {
+            Text(selectedCategory.name)
+                .font(.custom("Playfair Display", size: 30))
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .italic()
         }
     }
     

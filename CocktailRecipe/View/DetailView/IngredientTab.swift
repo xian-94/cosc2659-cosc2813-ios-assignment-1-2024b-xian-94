@@ -107,7 +107,6 @@ struct IngredientTab: View {
             
             // Table Rows
             VStack(alignment: .center) {
-             
                     ForEach(sortIngredients()) {
                         ingredient in
                         HStack {
@@ -115,7 +114,6 @@ struct IngredientTab: View {
                             Spacer()
                             Text(String(format: "%.1f", ingredient.quantity))
                             Text(ingredient.unit)
-                        
                     }
                 }
             }

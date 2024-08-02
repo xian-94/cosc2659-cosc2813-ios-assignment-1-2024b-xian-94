@@ -29,18 +29,20 @@ struct ItemListView: View {
         }
     }
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ZStack {
-                    Color("background")
-                        .ignoresSafeArea(.all)
-                    VStack {
-                        SearchBar(text: $searchQuery)
-                        Spacer()
-                            .frame(height: 20)
-                        CategoryList()
-                        ItemList(items: filterItems())
-                    }
+        ZStack {
+            Color("background")
+                .ignoresSafeArea(.all)
+            NavigationView {
+                ScrollView {
+//                    ZStack {
+                        VStack {
+                            SearchBar(text: $searchQuery)
+                            Spacer()
+                                .frame(height: 20)
+                            CategoryList()
+                            ItemList(items: filterItems())
+                        }
+//                    }
                 }
             }
         }

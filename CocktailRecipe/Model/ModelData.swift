@@ -12,26 +12,6 @@
 import Foundation
 import CoreLocation
 
-
-// Decode JSON file into a struct
-// Load category data
-//func loadCategories(fileName: String) -> [Category] {
-//    if let file = Bundle.main.url(forResource: fileName, withExtension: "json") {
-//        if let data = try? Data(contentsOf: file) {
-//            do {
-//                let decoder = JSONDecoder()
-//                let decoded = try decoder.decode([Category].self, from: data)
-//                return decoded
-//            } catch let error {
-//                fatalError("Failed to decode JSON: \(error)")
-//            }
-//        }
-//    } else {
-//        fatalError("Couldn't load \(fileName) file ")
-//    }
-//    return [] as [Category]
-//}
-// Function to load categories from JSON
 func loadCategories(fileName: String) -> [Category] {
     if let file = Bundle.main.url(forResource: fileName, withExtension: "json") {
         if let data = try? Data(contentsOf: file) {
@@ -71,7 +51,7 @@ func loadItems(fileName: String) -> [Item] {
 
 
 // Import data
-var categories = loadCategories(fileName: "categories.json")
+var categories = loadCategories(fileName: "categories")
 var items = loadItems(fileName: "items.json")
 
 

@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "name": "Classic",
+        "imageName": "classic",
+        "colorName": "category"
+    },
+    {
+        "id": 2,
+        "name": "Sour",
+        "imageName": "sour",
+        "colorName": "category2"
+        
+    },
+    {
+        "id": 3,
+        "name": "Frozen",
+        "imageName": "frozen",
+        "colorName": "category3"
+    },
+    {
+        "id": 4,
+        "name": "Martini",
+        "imageName": "martini",
+        "colorName": "category4"
+    },
+    {
+        "id": 5,
+        "name": "Spritz",
+        "imageName": "spirit",
+        "colorName": "category5"
+    },
+    {
+        "id": 6,
+        "name": "Mocktails",
+        "imageName": "mocktail",
+        "colorName": "category6"
+    }
+]

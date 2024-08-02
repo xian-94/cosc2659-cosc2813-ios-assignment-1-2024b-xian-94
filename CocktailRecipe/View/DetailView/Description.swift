@@ -16,42 +16,42 @@ import SwiftUI
 // TODO: Apply font and color later, add description to the Item model
 struct Description: View {
     var item: Item
-    private let slogan = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     var body: some View {
         VStack {
             Text(item.name)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .font(.custom("Playfair Display", size: 25))
             Spacer()
                 .frame(height: 10)
             Rating(item: item)
             Spacer()
                 .frame(height: 20)
-            Text(slogan)
-                .font(.caption)
+            Text(item.description)
+                .font(.custom("Raleway", size: 15))
             Spacer()
                 .frame(height: 20)
-            HStack {
-                Text("Level ")
-                    .font(.subheadline)
+            HStack(spacing: 20) {
+                Text("Level")
+                    .font(.custom("Raleway", size: 15))
                     .fontWeight(.medium)
-                Spacer()
-                    .frame(width: 50, alignment: .leading)
                 Text(item.level)
+                    .font(.custom("Raleway", size: 15))
                 
             }
             Spacer()
                 .frame(height: 20)
-            HStack {
-                Text("Glass ")
-                    .font(.subheadline)
+            HStack(spacing: 20) {
+                Text("Glass")
+                    .font(.custom("Raleway", size: 15))
                     .fontWeight(.medium)
                 Text("\(item.glass)")
-                    .offset(x: 40)
+                    .font(.custom("Raleway", size: 15))
+                    
                 
             }
         }
+        .padding()
         
     }
 }

@@ -22,7 +22,5 @@ struct Category: Identifiable, Codable {
     var image: Image {
         Image(imageName)
     }
-    
-    // TODO: Add color after deciding the theme
-    
+    var colorName: String
 }

@@ -59,11 +59,11 @@ struct Rating: View {
                     .font(.title3)
                     .foregroundColor(Color.yellow)
                 Text(String(format: "%.1f", rating))
-                    .font(.title3)
+                    .font(.system(size: 20))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 Text("(\(countRating))")
-                    .font(.system(size: 20))
-                    .foregroundColor(.gray)
+                    .font(.custom("Raleway", size: 20))
+                    .foregroundColor(Color("second-text"))
             }
         }
     }

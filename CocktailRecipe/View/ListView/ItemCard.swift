@@ -53,9 +53,8 @@ struct ItemCard : View  {
             // Item's information
             VStack {
                 Text(item.name)
-                    .font(.custom("Raleway", size: 24))
+                    .font(.custom("Raleway", size: 20))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-//                    .font(.system(size: 20))
                 Spacer()
                     .frame(height: 10)
                 HStack {
