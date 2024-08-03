@@ -14,45 +14,51 @@ import SwiftUI
 
 // Create the CategoryList component
 
-// TODO: Render items based on category later 
+// TODO: Render items based on category later
 struct CategoryList: View {
     // Track the chosen category
-    @State var selectedCategory: Category?
+    @Binding var selectedCategory: Category?
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(categories) {
-                    category in
-                    CategoryCard(category: category)
-                        .onTapGesture {
-                            selectedCategory = category
-                        }
+        VStack {
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(categories) {
+                        category in
+                        CategoryCard(category: category, selected: $selectedCategory)
+                            .onTapGesture {
+                                // Deselect if chosen
+                                if selectedCategory == category {
+                                    selectedCategory = nil
+                                }
+                                else {
+                                    // Select if not
+                                    selectedCategory = category
+                                }
+                            }
+                    }
                 }
+                .padding()
             }
-            .padding()
+            // Display the chosen category name
+            if let selectedCategory = selectedCategory {
+                Text(selectedCategory.name)
+                    .font(.custom("Playfair Display", size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .italic()
+                    .foregroundStyle(Color("primary-text"))
+            }
+            else {
+                // Display all cocktails if not select category
+                Text("All cocktails")
+                    .font(.custom("Playfair Display", size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .italic()
+                    .foregroundStyle(Color("primary-text"))
+            }
         }
-        if let selectedCategory = selectedCategory {
-            Text(selectedCategory.name)
-                .font(.custom("Playfair Display", size: 30))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .italic()
-                .foregroundStyle(Color("primary-text"))
-        }
-        else {
-            Text("All cocktails")
-                .font(.custom("Playfair Display", size: 30))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .italic()
-                .foregroundStyle(Color("primary-text"))
-        }
+        
         
     }
     
 }
 
-// Preview the content 
-struct CategoryList_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryList()
-    }
-}

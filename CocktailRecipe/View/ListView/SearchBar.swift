@@ -14,7 +14,6 @@ import Foundation
 import SwiftUI
 
 // Create the Search bar components
-// TODO: Add binding state later, modify font style
 struct SearchBar: View {
     // Bind the user input
     @Binding var text: String
@@ -23,15 +22,17 @@ struct SearchBar: View {
         HStack {
             // Placeholder for user input
             TextField("Search...", text: $text)
-                .font(.system(size: 15))
-                .padding(9)
-                .padding(.horizontal, 25)
+                .font(.custom("Raleway", size: 15))
+                .foregroundColor(Color("main-text"))
+                .padding(.vertical, 10)
+                .padding(.horizontal, 35)
                 .frame(width: 300)
-                .background(Color(.systemGray6))
+                .background(Color("shadow").opacity(0.2))
+            // Display when no user input provided
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color("second-text"))
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
                     }

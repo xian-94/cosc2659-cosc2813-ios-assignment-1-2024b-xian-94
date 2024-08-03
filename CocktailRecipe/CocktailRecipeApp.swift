@@ -15,11 +15,11 @@ import SwiftUI
 
 @main
 struct CocktailRecipeApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+       var body: some Scene {
+           WindowGroup {
+               ContentView()
+           }
+       }
 }
 
 

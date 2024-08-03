@@ -7,7 +7,8 @@
  ID: 3957034
  Created  date: 20/7/2024
  Last modified:
- Acknowledgement: Acknowledge the resources that you use here.
+ Acknowledgement: 
+ - Compare object: https://developer.apple.com/documentation/swift/equatable
  */
 
 import Foundation
@@ -15,7 +16,7 @@ import SwiftUI
 
 
 // Create Category object and its attributes
-struct Category: Identifiable, Codable {
+struct Category: Identifiable, Codable, Equatable {
     var id: Int
     var name: String
     var imageName: String
@@ -23,4 +24,9 @@ struct Category: Identifiable, Codable {
         Image(imageName)
     }
     var colorName: String
+    
+    // Conform to Equatable protocol - Function to compare objects
+    static func == (obj1: Category, obj2: Category) -> Bool {
+        return obj1.id == obj2.id;
+    }
 }

@@ -14,33 +14,28 @@ import SwiftUI
 
 
 // Create CategoryCard component
-// TODO: Modify name font later
-// TODO: Category name appear in the center when clicked on the image
 struct CategoryCard: View {
     // Attributes
     var category: Category
+    // Control the chosen category
+    @Binding var selected: Category?
     
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(Color(category.colorName))
-                .frame(width: 70, height: 70)
+            // Display frame based on the chosen state
+                .frame(width: selected == category ? 80 : 70, height: selected == category ? 80 : 70)
                 .cornerRadius(10)
             category.image
                 .resizable()
-                .frame(width: 50, height: 50)
+                .frame(width: selected == category ? 60 : 50, height: selected == category ? 60 : 50)
         }
-        
+        .shadow(radius: selected == category ? 10 : 0)
+        .animation(.spring(), value: selected)
         
     }
     
 }
 
-// Preview the component
-struct CategoryCard_Preview: PreviewProvider {
-    static var previews: some View {
-        CategoryCard(category: categories[1])
-        
-    }
-}
 

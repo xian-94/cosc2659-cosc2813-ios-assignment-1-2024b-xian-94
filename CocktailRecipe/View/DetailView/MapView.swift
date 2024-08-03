@@ -34,7 +34,7 @@ struct MapView: View {
                             .foregroundColor(Color("cranberry"))
                             .controlSize(.extraLarge)
                             .onTapGesture {
-                                popup = true
+                                popup.toggle()
                             }
                     }
                 }
@@ -59,7 +59,7 @@ struct MapView: View {
                             .font(.custom("Raleway", size: 15))
                         // Button to close the popup
                         Button(action: {
-                            popup = false
+                            popup.toggle()
                         }, label: {
                             Text("OK")
                                 .foregroundColor(Color("main-text"))

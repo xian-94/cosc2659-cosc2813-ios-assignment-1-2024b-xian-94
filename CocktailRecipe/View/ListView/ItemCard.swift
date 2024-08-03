@@ -55,20 +55,25 @@ struct ItemCard : View  {
                 Text(item.name)
                     .font(.custom("Raleway", size: 20))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.mainText)
                 Spacer()
                     .frame(height: 10)
                 HStack {
                     HStack {
                         Image(systemName: "wineglass")
+                            .foregroundColor(.mainText)
                         Text("\(item.glass)")
                             .font(.custom("Raleway", size: 15))
+                            .foregroundColor(.mainText)
                     }
                     Spacer()
                         .frame(width: 10)
                     HStack {
                         Image(systemName: "level")
+                            .foregroundColor(.mainText)
                         Text("\(item.level)")
                             .font(.custom("Raleway", size: 15))
+                            .foregroundColor(.mainText)
                     }
                 }
             }

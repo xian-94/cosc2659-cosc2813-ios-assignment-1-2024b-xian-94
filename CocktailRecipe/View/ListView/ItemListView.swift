@@ -14,40 +14,90 @@ import Foundation
 import SwiftUI
 
 // Main view: Navigation list of items view
+// TODO: add wine base if have time
 struct ItemListView: View {
-    // Manage search query
+    // Manage filter options by state
     @State private var searchQuery: String = ""
-    // Filter the items given the query
+    @State private var selectedCategory: Category?
+    @State private var ratingOption: Float?
+    @State private var levelOption: String?
+    
+    // Display filter form
+    @State private var showFilter: Bool = false
+    
+    // Filter the items given the query and filter options
     private func filterItems() -> [Item] {
-        if searchQuery.isEmpty {
-            return items
+        var filtered = items
+        // Filter based on category
+        if let selectedCategory = selectedCategory {
+            filtered = filtered.filter { $0.category == selectedCategory.id }
         }
-        else {
-            return items.filter {
+        // Filter based on rating
+        if let ratingLimit = ratingOption {
+            filtered = filtered.filter { $0.ratings >= ratingLimit }
+        }
+        // Filter based on level
+        if let level = levelOption {
+            filtered = filtered.filter { $0.level.lowercased() == level.lowercased() }
+        }
+        // Filter based on search query
+        if !searchQuery.isEmpty {
+            filtered = filtered.filter {
                 $0.name.lowercased().contains(searchQuery.lowercased())
             }
         }
+        return filtered
     }
+    
+    // Main body view
     var body: some View {
-        
         NavigationView {
             ZStack {
                 Color("background")
                     .ignoresSafeArea(.all)
+                
                 ScrollView {
                     VStack(spacing: 5) {
-                        SearchBar(text: $searchQuery)
+                        
+                        HStack {
+                            SearchBar(text: $searchQuery)
+                            Button(action: {
+                                // Click on the button to show the filter
+                                showFilter.toggle()
+                            }, label:
+                            
+                            {
+                                Image(systemName: "line.3.horizontal.decrease.circle")
+                                    .foregroundColor(Color("background"))
+                                    .frame(width: 20, height: 20)
+                                    .padding(3)
+                            })
+                            .controlSize(.regular)
+                            .buttonBorderShape(.roundedRectangle(radius: 10))
+                            .buttonStyle(.borderedProminent)
+                            .tint(Color("cranberry"))
+                        }
+                        
                         Spacer()
                             .frame(height: 20)
-                        CategoryList()
+                        // Display the category list
+                        CategoryList(selectedCategory: $selectedCategory)
+                        
                         Divider()
                             .frame(width: 200)
                             .background(Color("accent"))
+                        Spacer()
+                            .frame(height: 10)
+                        // Item list
                         ItemList(items: filterItems())
                     }
                 }
             }
         }
+        .sheet(isPresented: $showFilter) {
+            Filter(selectedRating: $ratingOption, selectedLevel: $levelOption)
+        }
+        
     }
     
 }

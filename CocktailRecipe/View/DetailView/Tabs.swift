@@ -18,7 +18,7 @@ struct Tabs: View {
     let titles = ["Ingredients", "Instruction"]
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             HStack(spacing: 0) {
                 // Loop through each title for display
                 ForEach(0..<titles.count, id: \.self) { i in
