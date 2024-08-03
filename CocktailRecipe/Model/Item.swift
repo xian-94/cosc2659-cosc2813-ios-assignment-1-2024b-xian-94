@@ -12,7 +12,6 @@
 
 import Foundation
 import SwiftUI
-import CoreLocation
 
 // Create the Item object and its attributes
 struct Item: Identifiable, Codable {
@@ -29,20 +28,11 @@ struct Item: Identifiable, Codable {
     var description: String
     var ingredients: [Ingredient]
     var instruction: [String]
-    var video: String 
-    var coordinates: Coordinates
-    // Location coordination object and image object
-    var locationCoordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
-    }
+    var video: String
     var image: Image {
         Image(imageName)
     }
 }
 
-// Coordinates of location
-struct Coordinates: Codable {
-    var latitude: Double
-    var longitude: Double
-}
+
 

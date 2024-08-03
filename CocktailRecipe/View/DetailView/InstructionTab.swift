@@ -13,12 +13,12 @@
 import Foundation
 import SwiftUI
 
-// TODO: Add real item object later
 struct InstructionTab: View {
     var item: Item
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             ZStack {
+                // Background for Steps
                 UnevenRoundedRectangle(cornerRadii: .init(
                     topLeading: 50.0,
                     bottomLeading: 10.0,
@@ -26,21 +26,25 @@ struct InstructionTab: View {
                     topTrailing: 30.0),
                                        style: .continuous
                 )
-                .fill(Color("vintage-gold").opacity(0.4))
-                .frame(width: 390, height: UIScreen.main.bounds.height *
+                .fill(Color("accent").opacity(0.3))
+                .frame(width: 350, height: UIScreen.main.bounds.height *
                        (1/CGFloat(item.instruction.count) + 0.1))
                 
                 VStack {
                     Text("Steps")
                         .font(.custom("Playfair Display", size: 20))
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 15) {
                         ForEach(Array(item.instruction.enumerated()), id: \.offset) {
                             i, step in
                             HStack(spacing: 20) {
                                 Text("\(i + 1)")
                                     .fontWeight(.medium)
+                                    .font(.custom("Raleway", size: 20))
+                                    .foregroundColor(Color("primary-text"))
                                 Text("\(step)")
+                                    .font(.custom("Raleway", size: 16))
+                                    .foregroundColor(Color("main-text"))
                             }
                             .padding(.horizontal)
                         }
@@ -48,13 +52,11 @@ struct InstructionTab: View {
                     .padding(.vertical, 4)
                 }
             }
-            
-            Divider()
             VStack(alignment: .center) {
-                Text("Video Guide")
+                Text("Tutorial")
                     .font(.custom("Playfair Display", size: 20))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                VideoView(videoID: "E-Tlb5x-QQg")
+                VideoView(item: item)
                     .frame(height: UIScreen.main.bounds.height * 0.3)
             }
             .padding(.vertical, 5)

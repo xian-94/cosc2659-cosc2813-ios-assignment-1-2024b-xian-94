@@ -48,7 +48,7 @@ struct Description: View {
             Spacer()
                 .frame(height: 20)
             // Other information
-            HStack(spacing: 20) {
+            HStack(spacing: 40) {
                 Text("Level")
                     .font(.custom("Raleway", size: 15))
                     .fontWeight(.medium)
@@ -60,7 +60,7 @@ struct Description: View {
             }
             Spacer()
                 .frame(height: 20)
-            HStack(spacing: 20) {
+            HStack(spacing: 40) {
                 Text("Glass")
                     .font(.custom("Raleway", size: 15))
                     .fontWeight(.medium)

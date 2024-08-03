@@ -1,14 +1,14 @@
 /*
-  RMIT University Vietnam
-  Course: COSC2659|COSC2813 iOS Development
-  Semester: 2024B
-  Assessment: Assignment 1
-  Author: Truong Hong Van
-  ID: 3957034
-  Created  date: 20/7/2024
-  Last modified:
-  Acknowledgement: Acknowledge the resources that you use here.
-*/
+ RMIT University Vietnam
+ Course: COSC2659|COSC2813 iOS Development
+ Semester: 2024B
+ Assessment: Assignment 1
+ Author: Truong Hong Van
+ ID: 3957034
+ Created  date: 20/7/2024
+ Last modified:
+ Acknowledgement: Acknowledge the resources that you use here.
+ */
 
 import SwiftUI
 
@@ -20,7 +20,7 @@ struct CategoryList: View {
     @State var selectedCategory: Category?
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-        HStack {
+            HStack {
                 ForEach(categories) {
                     category in
                     CategoryCard(category: category)
@@ -29,14 +29,23 @@ struct CategoryList: View {
                         }
                 }
             }
-        .padding()
+            .padding()
         }
         if let selectedCategory = selectedCategory {
             Text(selectedCategory.name)
                 .font(.custom("Playfair Display", size: 30))
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .italic()
+                .foregroundStyle(Color("primary-text"))
         }
+        else {
+            Text("All cocktails")
+                .font(.custom("Playfair Display", size: 30))
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .italic()
+                .foregroundStyle(Color("primary-text"))
+        }
+        
     }
     
 }

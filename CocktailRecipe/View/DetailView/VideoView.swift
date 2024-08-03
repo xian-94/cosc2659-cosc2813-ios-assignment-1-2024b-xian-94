@@ -19,7 +19,7 @@ import SwiftUI
 // Embed YouTube video in the main view
 // TODO: Add video ID to the Item details
 struct VideoView: UIViewRepresentable {
-    let videoID: String
+    var item: Item
     
     // Create a WKWebView instance
     func makeUIView(context: Context) -> WKWebView {
@@ -28,7 +28,7 @@ struct VideoView: UIViewRepresentable {
     
     // Update the view when the URL changes
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        guard let url = URL(string: "https://www.youtube.com/embed/\(videoID)") else {return}
+        guard let url = URL(string: "https://www.youtube.com/embed/\(item.video)") else {return}
         uiView.scrollView.isScrollEnabled = false
         // Create the URL request and load in the web view
         uiView.load(URLRequest(url: url))

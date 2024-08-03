@@ -39,7 +39,7 @@ struct SearchBar: View {
                 .overlay(
                     // Adding style for search bar
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.black, lineWidth: 0.5)
+                        .stroke(Color("accent"), lineWidth: 0.5)
                         .frame(width: 300)
                 )
         }

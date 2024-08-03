@@ -15,7 +15,7 @@ struct Tabs: View {
     var item: Item
     // Hold the selected tab index
     @State private var selected = 0
-    let titles = ["Ingredients", "Instruction", "Shop"]
+    let titles = ["Ingredients", "Instruction"]
     
     var body: some View {
         VStack {
@@ -28,10 +28,10 @@ struct Tabs: View {
                         .foregroundColor(self.selected == i ? Color(.white) : Color("main-text"))
                         .fontWeight(.bold)
                         .padding(.vertical, 10)
-                        .padding(.horizontal, 30)
+                        .padding(.horizontal, 40)
                     // Selected title has an oustanding background
                         .background(Color("cranberry").opacity(self.selected == i ? 1 : 0))
-                        .cornerRadius(30)
+                        .cornerRadius(10)
                         .onTapGesture {
                             withAnimation(.default) {
                                 self.selected = i
@@ -40,18 +40,16 @@ struct Tabs: View {
                     Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
                 }
             }
-            .background(Color("cranberry").opacity(0.2))
-            .cornerRadius(30)
+            .background(Color("cranberry").opacity(0.4))
+            .cornerRadius(10)
             .padding(.horizontal)
+            .frame(width: 340)
             
             // Display tabs based on index chosen
             if self.selected == 0 {
                 IngredientTab(item: item)
             }
             else if self.selected == 1 {
-                InstructionTab(item: item)
-            }
-            else {
                 InstructionTab(item: item)
             }
         }

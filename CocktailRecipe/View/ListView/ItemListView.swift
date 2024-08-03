@@ -35,11 +35,14 @@ struct ItemListView: View {
                 Color("background")
                     .ignoresSafeArea(.all)
                 ScrollView {
-                    VStack {
+                    VStack(spacing: 5) {
                         SearchBar(text: $searchQuery)
                         Spacer()
                             .frame(height: 20)
                         CategoryList()
+                        Divider()
+                            .frame(width: 200)
+                            .background(Color("accent"))
                         ItemList(items: filterItems())
                     }
                 }
