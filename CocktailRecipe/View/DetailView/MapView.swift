@@ -14,8 +14,8 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    // TODO: Change to the real Store object
-    var location: CLLocationCoordinate2D
+    
+    var location: Location
     // Control the pop up information box
     @State private var popup = false
     // Main body view
@@ -23,12 +23,12 @@ struct MapView: View {
         ZStack {
             Map(initialPosition: .region(
                 MKCoordinateRegion(
-                    center: location,
+                    center: location.coordinate,
                     span: MKCoordinateSpan(latitudeDelta: 0.004, longitudeDelta: 0.004)
                 )))
             {
                 // Set marker for the location
-                Annotation("My House", coordinate: location) {
+                Annotation(location.name, coordinate: location.coordinate) {
                     VStack {
                         Image(systemName: "mappin.circle.fill")
                             .foregroundColor(Color("cranberry"))
@@ -40,7 +40,7 @@ struct MapView: View {
                 }
             }
             if popup {
-                // Background color to make the popup box outstanding 
+                // Background color to make the popup box outstanding
                 Color("shadow").opacity(0.4)
                     .ignoresSafeArea()
                 // Pop up information box
@@ -82,6 +82,6 @@ struct MapView: View {
 
 struct MapView_Preview: PreviewProvider {
     static var previews: some View {
-        MapView(location: CLLocationCoordinate2D(latitude: 10.75837078405324, longitude: 106.74573081402893))
+        MapView(location: items[0].location)
     }
 }

@@ -21,6 +21,7 @@ struct InstructionTab: View {
                 Text("Steps")
                     .font(.custom("Playfair Display", size: 20))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundStyle(Color.mainText)
                 VStack(alignment: .leading, spacing: 15) {
                     ForEach(Array(item.instruction.enumerated()), id: \.offset) {
                         i, step in
@@ -45,6 +46,7 @@ struct InstructionTab: View {
                 Text("Tutorial")
                     .font(.custom("Playfair Display", size: 20))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundStyle(Color.mainText)
                 VideoView(item: item)
                     .frame(height: UIScreen.main.bounds.height * 0.3)
             }

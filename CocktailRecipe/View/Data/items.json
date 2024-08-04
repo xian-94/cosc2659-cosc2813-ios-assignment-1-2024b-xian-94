@@ -4,7 +4,7 @@
         "name": "Old Fashioned",
         "category": 1,
         "level": "Easy",
-        "glass": "Basic",
+        "base": "Bourbon",
         "imageName": "oldfashioned",
         "collection": ["oldfashioned1", "oldfashioned2", "oldfashioned3"],
         "ratings": 4.6,
@@ -49,14 +49,22 @@
             "Strain into a rocks glass over one large ice cube.",
             "Express the oil of an orange twist over the glass, then drop into the glass to garnish."
         ],
-        "video": "MnEQpNUYhGE"
+        "video": "MnEQpNUYhGE",
+        "location": {
+            "latitude" : 0,
+            "longitude": 0,
+            "address": "",
+            "name": "",
+            "shoppee": "",
+            "facebook": ""
+        }
     },
     {
         "id": 2,
         "name": "Mojito",
         "category": 1,
         "level": "Med",
-        "glass": "Highball",
+        "base": "Rum",
         "imageName": "mojito",
         "collection": ["mojito1", "mojito2", "mojito3"],
         "ratings": 4.0,
@@ -101,14 +109,22 @@
             "Top with the club soda.",
             "Garnish with a mint sprig and lime wheel."
         ],
-        "video": "KWU9ZaWbeuQ"
+        "video": "KWU9ZaWbeuQ",
+        "location": {
+            "latitude" : 0,
+            "longitude": 0,
+            "address": "",
+            "name": "",
+            "shoppee": "",
+            "facebook": ""
+        }
     },
     {
         "id": 3,
         "name": "Manhattan",
         "category": 1,
         "level": "Easy",
-        "glass": "Cocktail",
+        "base": "Whiskey",
         "imageName": "manhattan",
         "collection": ["manhattan1", "manhattan2", "manhattan3"],
         "ratings": 3.5,
@@ -139,14 +155,22 @@
             "Strain into a chilled Nick & Nora or coupe glass.",
             "Garnish with a brandied cherry (or a lemon twist, if preferred)",
         ],
-        "video": "TFWPtkNoF4Y"
+        "video": "TFWPtkNoF4Y",
+        "location": {
+            "latitude" : 0,
+            "longitude": 0,
+            "address": "",
+            "name": "",
+            "shoppee": "",
+            "facebook": ""
+        }
     },
     {
         "id": 4,
         "name": "Gimlet",
         "category": 1,
         "level": "Easy",
-        "glass": "Martini",
+        "base": "Gin",
         "imageName": "gimlet",
         "collection": ["gimlet1", "gimlet2", "gimlet3"],
         "ratings": 4.8,
@@ -177,14 +201,22 @@
             "Strain into a chilled Martini glass or an rocks glass filled with fresh ice.",
             "Garnish with a lime wheel.",
         ],
-        "video": "nCS8hqH9MnE"
+        "video": "nCS8hqH9MnE",
+        "location": {
+            "latitude" : 0,
+            "longitude": 0,
+            "address": "",
+            "name": "",
+            "shoppee": "",
+            "facebook": ""
+        }
     },
     {
         "id": 5,
         "name": "Bloody Mary",
         "category": 1,
         "level": "Hard",
-        "glass": "Basic",
+        "base": "Vodka",
         "imageName": "mary",
         "collection": ["mary1", "mary2", "mary3"],
         "ratings": 4.3,
@@ -267,7 +299,15 @@
             "Strain into the prepared glass.",
             "Garnish with parsley sprig, 2 speared green olives, a lime wedge and a celery stalk (optional)."
         ],
-        "video": "rpEzoWNbgSk"
+        "video": "rpEzoWNbgSk",
+        "location": {
+            "latitude" : 0,
+            "longitude": 0,
+            "address": "",
+            "name": "",
+            "shoppee": "",
+            "facebook": ""
+        }
     },
     
 ]

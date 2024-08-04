@@ -60,12 +60,12 @@ struct Description: View {
             }
             Spacer()
                 .frame(height: 20)
-            HStack(spacing: 40) {
-                Text("Glass")
+            HStack(spacing: 20) {
+                Text("Base")
                     .font(.custom("Raleway", size: 15))
                     .fontWeight(.medium)
                     .foregroundColor(Color("main-text"))
-                Text("\(item.glass)")
+                Text("\(item.base)")
                     .font(.custom("Raleway", size: 15))
                     .foregroundColor(Color("main-text"))
                     

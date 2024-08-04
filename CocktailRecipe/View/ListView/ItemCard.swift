@@ -62,7 +62,7 @@ struct ItemCard : View  {
                     HStack {
                         Image(systemName: "wineglass")
                             .foregroundColor(.mainText)
-                        Text("\(item.glass)")
+                        Text("\(item.base)")
                             .font(.custom("Raleway", size: 15))
                             .foregroundColor(.mainText)
                     }

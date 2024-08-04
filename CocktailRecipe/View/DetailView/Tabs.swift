@@ -15,7 +15,7 @@ struct Tabs: View {
     var item: Item
     // Hold the selected tab index
     @State private var selected = 0
-    let titles = ["Ingredients", "Instruction"]
+    let titles = ["Ingredients", "Instruction", "Shop"]
     
     var body: some View {
         VStack(spacing: 20) {
@@ -23,12 +23,12 @@ struct Tabs: View {
                 // Loop through each title for display
                 ForEach(0..<titles.count, id: \.self) { i in
                     Text(titles[i])
-                        .font(.custom("Playfair Display", size: 14))
+                        .font(.custom("Playfair Display", size: 12))
                     // Selected title has a different color
                         .foregroundColor(self.selected == i ? Color(.white) : Color("main-text"))
                         .fontWeight(.bold)
                         .padding(.vertical, 10)
-                        .padding(.horizontal, 40)
+                        .padding(.horizontal, 30)
                     // Selected title has an oustanding background
                         .background(Color("cranberry").opacity(self.selected == i ? 1 : 0))
                         .cornerRadius(10)
@@ -43,7 +43,7 @@ struct Tabs: View {
             .background(Color("cranberry").opacity(0.4))
             .cornerRadius(10)
             .padding(.horizontal)
-            .frame(width: 340)
+            .frame(width: 380)
             
             // Display tabs based on index chosen
             if self.selected == 0 {
@@ -51,6 +51,10 @@ struct Tabs: View {
             }
             else if self.selected == 1 {
                 InstructionTab(item: item)
+            }
+            else {
+                ShopTab(item: item)
+                   
             }
         }
     }

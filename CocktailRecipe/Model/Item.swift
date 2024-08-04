@@ -12,6 +12,7 @@
 
 import Foundation
 import SwiftUI
+import CoreLocation
 
 // Create the Item object and its attributes
 struct Item: Identifiable, Codable {
@@ -19,7 +20,7 @@ struct Item: Identifiable, Codable {
     var name: String
     var category: Int
     var level: String
-    var glass: String
+    var base: String
     var imageName: String
     // Collection of images
     var collection: [String]
@@ -32,6 +33,24 @@ struct Item: Identifiable, Codable {
     var image: Image {
         Image(imageName)
     }
+    var location: Location
+   
+}
+
+// Coordinates and address of physical location
+// URL of online location
+struct Location: Codable {
+    var latitude: Double
+    var longitude: Double
+    var address: String
+    var name: String
+    var shoppee: String
+    var facebook: String
+    // Location coordination object
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
 }
 
 

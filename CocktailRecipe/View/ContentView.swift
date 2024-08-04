@@ -15,33 +15,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Change the app theme
-    @State private var changeTheme: Bool = false
-    @Environment(\.colorScheme) private var scheme: ColorScheme
-//    @EnvironmentObject var themeManager: ThemeManager
-    @AppStorage("user_theme") private var theme: Theme = .system
     var body: some View {
         NavigationView {
             VStack {
-                ItemListView()
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                                    Button(action: {
-                                        // Present the ThemeManager
-                                        changeTheme.toggle()
-                                    }) {
-                                        Image(systemName: "paintpalette")
-                                    }
-                                }
+                WelcomeView()
             }
         }
-        .preferredColorScheme(theme.colorScheme)
-        .sheet(isPresented: $changeTheme, content: {
-            ThemeManagerView(scheme: scheme)
-                .presentationDetents([.height( 410)])
-                .presentationBackground(.clear)
-        })
         
     }
 }

@@ -14,12 +14,16 @@ import Foundation
 import SwiftUI
 
 // Main view: Navigation list of items view
-// TODO: add wine base if have time
 struct ItemListView: View {
+    // Manage system theme
+    @State private var changeTheme: Bool = false
+    @Environment(\.colorScheme) private var scheme: ColorScheme
+    @AppStorage("user_theme") private var theme: Theme = .system
+    
     // Manage filter options by state
     @State private var searchQuery: String = ""
     @State private var selectedCategory: Category?
-    @State private var ratingOption: Float?
+    @State private var ratingOption: Int?
     @State private var levelOption: String?
     
     // Display filter form
@@ -28,18 +32,22 @@ struct ItemListView: View {
     // Filter the items given the query and filter options
     private func filterItems() -> [Item] {
         var filtered = items
+        
         // Filter based on category
         if let selectedCategory = selectedCategory {
             filtered = filtered.filter { $0.category == selectedCategory.id }
         }
+        
         // Filter based on rating
         if let ratingLimit = ratingOption {
-            filtered = filtered.filter { $0.ratings >= ratingLimit }
+            filtered = filtered.filter { $0.ratings >= Float(ratingLimit) }
         }
+        
         // Filter based on level
         if let level = levelOption {
             filtered = filtered.filter { $0.level.lowercased() == level.lowercased() }
         }
+        
         // Filter based on search query
         if !searchQuery.isEmpty {
             filtered = filtered.filter {
@@ -57,16 +65,17 @@ struct ItemListView: View {
                     .ignoresSafeArea(.all)
                 
                 ScrollView {
-                    VStack(spacing: 5) {
-                        
+                    VStack {
+                        Spacer()
+                            .frame(height: 25)
                         HStack {
                             SearchBar(text: $searchQuery)
                             Button(action: {
                                 // Click on the button to show the filter
                                 showFilter.toggle()
                             }, label:
-                            
-                            {
+                                    
+                                    {
                                 Image(systemName: "line.3.horizontal.decrease.circle")
                                     .foregroundColor(Color("background"))
                                     .frame(width: 20, height: 20)
@@ -79,13 +88,13 @@ struct ItemListView: View {
                         }
                         
                         Spacer()
-                            .frame(height: 20)
+                            .frame(height: 5)
                         // Display the category list
                         CategoryList(selectedCategory: $selectedCategory)
                         
                         Divider()
                             .frame(width: 200)
-                            .background(Color("accent"))
+                            .background(Color("primary-text"))
                         Spacer()
                             .frame(height: 10)
                         // Item list
@@ -93,9 +102,46 @@ struct ItemListView: View {
                     }
                 }
             }
+            
+            // Navigation bar
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                // App name
+                ToolbarItem(placement: .principal) {
+                    Text("LeTonneau")
+                        .font(.custom("Lobster", size: 30))
+                        .foregroundStyle(Color.cranberry)
+                    //                        .offset(y: 10)
+                        .padding()
+                }
+                // Theme changer
+                ToolbarItem(placement:
+                        .navigationBarTrailing) {
+                            Button(action: {
+                                // Present the ThemeManager
+                                changeTheme.toggle()
+                            }) {
+                                Image(systemName: theme == .dark ?  "moon.stars" : "sun.max")
+                                    .resizable()
+                                    .frame(width: 35, height: 35)
+                                    .foregroundColor(.mainText)
+                            }
+                        }
+            }
         }
+        
+        .preferredColorScheme(theme.colorScheme)
+        .navigationBarBackButtonHidden(true)
+        .sheet(isPresented: $changeTheme, content: {
+            ThemeManagerView(scheme: scheme)
+                .presentationDetents([.height( 410)])
+                .presentationBackground(.clear)
+        })
         .sheet(isPresented: $showFilter) {
             Filter(selectedRating: $ratingOption, selectedLevel: $levelOption)
+                .presentationDetents([.height(350)])
+                .presentationBackground(.clear)
+            
         }
         
     }

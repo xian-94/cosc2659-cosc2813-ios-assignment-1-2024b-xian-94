@@ -87,7 +87,7 @@ enum Theme: String, CaseIterable {
             return .accent
         }
     }
-    
+    // Adjust color scheme 
     var colorScheme: ColorScheme? {
         switch self {
         case .system:
