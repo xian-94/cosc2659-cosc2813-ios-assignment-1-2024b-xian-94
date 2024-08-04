@@ -50,13 +50,14 @@ struct MapView: View {
                         .frame(width: 300, height: 200)
                     // Show detailed information of the location
                     VStack(spacing: 30) {
-                        Text("My House")
+                        Text(location.name)
                             .foregroundColor(Color("main-text"))
                             .font(.custom("Playfair Display", size: 20))
                             .fontWeight(.bold)
-                        Text("Adress: 258 Xuan Thuy, KDC Hong Phat")
+                        Text(location.address)
                             .foregroundColor(Color("main-text"))
                             .font(.custom("Raleway", size: 15))
+                            .padding(.horizontal, 50)
                         // Button to close the popup
                         Button(action: {
                             popup.toggle()

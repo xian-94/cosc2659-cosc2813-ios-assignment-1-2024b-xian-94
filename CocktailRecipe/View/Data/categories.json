@@ -26,12 +26,6 @@
     },
     {
         "id": 5,
-        "name": "Spritz",
-        "imageName": "spirit",
-        "colorName": "category5"
-    },
-    {
-        "id": 6,
         "name": "Mocktails",
         "imageName": "mocktail",
         "colorName": "category6"

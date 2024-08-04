@@ -10,7 +10,6 @@ import SwiftUI
 
 struct RatingPicker: View {
     @Binding var selectedRating: Int?
-//    @Namespace private var animation
     
     var body: some View {
         HStack {

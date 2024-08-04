@@ -14,7 +14,6 @@ import SwiftUI
 
 // Create the CategoryList component
 
-// TODO: Render items based on category later
 struct CategoryList: View {
     // Track the chosen category
     @Binding var selectedCategory: Category?

@@ -18,7 +18,6 @@ import SwiftUI
 // Create a sheet for change light/dark mode
 struct ThemeManagerView: View {
     var scheme: ColorScheme
-//    @EnvironmentObject var themeManager: ThemeManager
     @AppStorage("user_theme") private var theme: Theme = .system
     // Sliding effect
     @Namespace private var animation

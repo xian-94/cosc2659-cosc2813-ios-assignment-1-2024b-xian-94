@@ -14,7 +14,7 @@
 import Foundation
 import SwiftUI
 
-// TODO: Add style and portions if have time,  done state
+
 // Ingredeident tab content
 struct IngredientTab: View {
     // The cases for sorting

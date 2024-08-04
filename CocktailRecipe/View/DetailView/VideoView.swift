@@ -17,7 +17,6 @@ import SwiftUI
 
 // Placeholder for Instruction Video
 // Embed YouTube video in the main view
-// TODO: Add video ID to the Item details
 struct VideoView: UIViewRepresentable {
     var item: Item
     

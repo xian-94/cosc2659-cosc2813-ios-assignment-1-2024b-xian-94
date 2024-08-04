@@ -179,8 +179,8 @@
 				75A461542C5BE5E70051C448 /* Fonts */,
 				7568D8222C5165AA004B2988 /* View */,
 				7568D8212C5165A3004B2988 /* Model */,
-				75848F4E2C4BBED300226343 /* CocktailRecipeApp.swift */,
 				75848F522C4BBED500226343 /* Assets.xcassets */,
+				75848F4E2C4BBED300226343 /* CocktailRecipeApp.swift */,
 				75848F542C4BBED500226343 /* Preview Content */,
 			);
 			path = CocktailRecipe;

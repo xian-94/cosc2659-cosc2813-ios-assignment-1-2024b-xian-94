@@ -14,7 +14,7 @@
 import Foundation
 import SwiftUI
 
-// TODO: ADD wine base if have time, complete UI later
+
 struct Filter: View {
     
     // Track the state of rating, glass, and level
