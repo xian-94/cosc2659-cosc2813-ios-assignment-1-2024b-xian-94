@@ -4,10 +4,10 @@ Le Tonneau is a cocktail recipe application for iOS that provides users with a c
 
 ## Demo
 - Link to Demo: https://www.youtube.com/watch?v=F6Q92KNmWDY&feature=youtu.be
-![letonneau](https://github.com/user-attachments/assets/81125e49-6858-4bfb-81de-d9743a0f20b2)
-![listview](https://github.com/user-attachments/assets/99fe8daa-8171-4008-9dc6-69c50ab83c31)
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/81125e49-6858-4bfb-81de-d9743a0f20b2" width="300" />
+  <img src="https://github.com/user-attachments/assets/99fe8daa-8171-4008-9dc6-69c50ab83c31" width="300" />
+</p>
 ## Project Setup
 
 ### Prerequisites
