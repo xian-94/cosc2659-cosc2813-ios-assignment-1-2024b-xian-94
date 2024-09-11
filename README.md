@@ -2,25 +2,11 @@
 
 Le Tonneau is a cocktail recipe application for iOS that provides users with a comprehensive collection of cocktail recipes. The app features three main views: Welcome View, Navigation List View, and Detailed Recipe View. Additionally, users can customize the app's theme based on their preferences.
 
-## Features
+## Demo
+- Link to Demo: https://www.youtube.com/watch?v=F6Q92KNmWDY&feature=youtu.be
+![letonneau](https://github.com/user-attachments/assets/81125e49-6858-4bfb-81de-d9743a0f20b2)
+![listview](https://github.com/user-attachments/assets/99fe8daa-8171-4008-9dc6-69c50ab83c31)
 
-### Welcome View
-- **Introduction**: Displays the application logo, title, and slogan.
-- **Author Information**: Provides information about the author of the application.
-
-### Navigation List View
-- **Primary Interface**: Users can choose from a list of categories to view related cocktail drinks.
-- **Search Bar**: Allows users to search for specific cocktail recipes.
-- **Filter Options**: Enables users to filter recipes based on their preferences.
-
-### Detailed Recipe View
-- **Cocktail Information**: Provides essential information about a cocktail, including its history, level, wine base, ingredients, and instructions.
-- **Decoration Ideas**: A collection of images showing different ways to decorate the drink.
-- **Ingredient Locations**: Information on where to buy the ingredients.
-
-### Theme Customization
-- **System Mode Default**: The app's theme follows the system mode by default.
-- **User Preferences**: Users can change the theme to light or dark mode based on their preferences.
 
 ## Project Setup
 
